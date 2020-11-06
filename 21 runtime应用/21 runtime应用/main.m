@@ -26,7 +26,6 @@ int main(int argc, const char * argv[]) {
                                };
         Person *person = [Person mj_objectWithJson:json];
 
-
         NSLog(@"age = %d",person.age);
         NSLog(@"weight = %d",person.weight);
         NSLog(@"name = %@",person.name);
