@@ -46,6 +46,29 @@
 //    
 //    NSLog(@"person1 age = %ld   weight = %ld",person1.age,person1.weight);
 //    NSLog(@"person2 age = %ld   weight = %ld",person2.age,person2.weight);
+    
+    
+    
+  
+
+    
+    
+    unsigned int count;
+    Ivar * ivas = class_copyIvarList([UITextField class], &count);
+    for (int i = 0; i < count; i++) {
+        Ivar iva = ivas[i];
+        NSLog(@"%s   %s",ivar_getName(iva),ivar_getTypeEncoding(iva));
+    }
+    free(ivas);
+    
+    UITextField * textF = [[UITextField alloc]init];
+    textF.frame = CGRectMake(100, 100, 100, 50);
+    textF.placeholder = @"请输入";
+    [self.view addSubview:textF];
+    //iOS13 以前能通过KVC方式修改，现在不行了禁止了
+//    [textF setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
+    
+
 
 }
 
