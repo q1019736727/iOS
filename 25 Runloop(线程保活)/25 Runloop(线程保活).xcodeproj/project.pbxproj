@@ -14,6 +14,7 @@
 		1A049C47256BF77500788BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A049C46256BF77500788BF2 /* Assets.xcassets */; };
 		1A049C4A256BF77500788BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A049C48256BF77500788BF2 /* LaunchScreen.storyboard */; };
 		1A049C4D256BF77500788BF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A049C4C256BF77500788BF2 /* main.m */; };
+		1ABC8800256CB51F00C1EF63 /* CYThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC87FF256CB51F00C1EF63 /* CYThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		1A049C49256BF77500788BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A049C4B256BF77500788BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A049C4C256BF77500788BF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1ABC87FE256CB51F00C1EF63 /* CYThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYThread.h; sourceTree = "<group>"; };
+		1ABC87FF256CB51F00C1EF63 /* CYThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				1A049C3E256BF77200788BF2 /* SceneDelegate.m */,
 				1A049C40256BF77200788BF2 /* ViewController.h */,
 				1A049C41256BF77200788BF2 /* ViewController.m */,
+				1ABC87FE256CB51F00C1EF63 /* CYThread.h */,
+				1ABC87FF256CB51F00C1EF63 /* CYThread.m */,
 				1A049C43256BF77200788BF2 /* Main.storyboard */,
 				1A049C46256BF77500788BF2 /* Assets.xcassets */,
 				1A049C48256BF77500788BF2 /* LaunchScreen.storyboard */,
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABC8800256CB51F00C1EF63 /* CYThread.m in Sources */,
 				1A049C42256BF77200788BF2 /* ViewController.m in Sources */,
 				1A049C3C256BF77200788BF2 /* AppDelegate.m in Sources */,
 				1A049C4D256BF77500788BF2 /* main.m in Sources */,
