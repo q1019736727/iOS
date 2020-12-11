@@ -15,6 +15,7 @@
 #import "MutexDemo3.h"
 #import "NSLockDemo.h"
 #import "NSConditionDemo.h"
+#import "NSConditionLockDemo.h"
 
 @interface ViewController ()
 
@@ -22,9 +23,10 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSConditionDemo * demo = [[NSConditionDemo alloc]init];
+    NSConditionLockDemo * demo = [[NSConditionLockDemo alloc]init];
 //    [demo moneyTest];
 //    [demo ticketTest];
     [demo otherTest];
@@ -32,8 +34,44 @@
 //    NSLockDemo * demo = [[NSLockDemo alloc]init];
 //    [demo moneyTest];
 //    [demo ticketTest];
-
+    
 }
 
 
+
+#define SemaphoreBegin \
+static dispatch_semaphore_t semaphore;\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+    semaphore = dispatch_semaphore_create(1);\
+});\
+dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+
+#define SemaphoreEnd \
+dispatch_semaphore_signal(semaphore);
+
+- (void)test{
+    SemaphoreBegin
+    
+    //.....do something
+    NSLog(@"111");
+    
+    SemaphoreEnd
+}
+- (void)test1{
+    SemaphoreBegin
+
+    //.....do something
+    NSLog(@"222");
+    
+    SemaphoreEnd
+}
+- (void)test2{
+    SemaphoreBegin
+    
+    //.....do something
+    NSLog(@"333");
+    
+    SemaphoreEnd
+}
 @end
