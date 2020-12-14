@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A27852C25871242006C8C18 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A27852B25871242006C8C18 /* Person.m */; };
 		1A3F4EA12581B95400ECCC17 /* SerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3F4EA02581B95400ECCC17 /* SerialQueueDemo.m */; };
 		1A59836C25777A9A00ED8B8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A59836B25777A9A00ED8B8D /* AppDelegate.m */; };
 		1A59836F25777A9A00ED8B8D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A59836E25777A9A00ED8B8D /* SceneDelegate.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A27852A25871242006C8C18 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1A27852B25871242006C8C18 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		1A3F4E9F2581B95400ECCC17 /* SerialQueueDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SerialQueueDemo.h; sourceTree = "<group>"; };
 		1A3F4EA02581B95400ECCC17 /* SerialQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SerialQueueDemo.m; sourceTree = "<group>"; };
 		1A59836725777A9A00ED8B8D /* 30 线程的各种锁.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "30 线程的各种锁.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				1A7DB8B8258311740000C01C /* SemaphoreDemo.m */,
 				1A7DB8BB25833EE80000C01C /* SynchronizedDemo.h */,
 				1A7DB8BC25833EE80000C01C /* SynchronizedDemo.m */,
+				1A27852A25871242006C8C18 /* Person.h */,
+				1A27852B25871242006C8C18 /* Person.m */,
 			);
 			path = Locks;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				1A7DB8BD25833EE80000C01C /* SynchronizedDemo.m in Sources */,
 				1A7DB8B9258311740000C01C /* SemaphoreDemo.m in Sources */,
 				1ACE2E1925806A9E00091194 /* MutexDemo.m in Sources */,
+				1A27852C25871242006C8C18 /* Person.m in Sources */,
 				1ACE2E15258069C100091194 /* OSUnfairLockDemo.m in Sources */,
 				1A8536BE2580B17A0048E035 /* NSConditionDemo.m in Sources */,
 				1A8536C32580CEE50048E035 /* NSConditionLockDemo.m in Sources */,

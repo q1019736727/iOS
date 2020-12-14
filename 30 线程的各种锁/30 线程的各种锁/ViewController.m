@@ -16,6 +16,7 @@
 #import "NSLockDemo.h"
 #import "NSConditionDemo.h"
 #import "NSConditionLockDemo.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -34,7 +35,6 @@
 //    NSLockDemo * demo = [[NSLockDemo alloc]init];
 //    [demo moneyTest];
 //    [demo ticketTest];
-    
 }
 
 
