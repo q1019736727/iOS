@@ -15,6 +15,7 @@
 		1A278574258858B5006C8C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A278572258858B5006C8C18 /* LaunchScreen.storyboard */; };
 		1A278577258858B5006C8C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A278576258858B5006C8C18 /* main.m */; };
 		1A27858025885F9F006C8C18 /* CYProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A27857F25885F9F006C8C18 /* CYProxy.m */; };
+		1AAA1FEE2588F32300FA9198 /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA1FED2588F32300FA9198 /* Proxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		1A278576258858B5006C8C18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A27857E25885F9F006C8C18 /* CYProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYProxy.h; sourceTree = "<group>"; };
 		1A27857F25885F9F006C8C18 /* CYProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYProxy.m; sourceTree = "<group>"; };
+		1AAA1FEC2588F32300FA9198 /* Proxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proxy.h; sourceTree = "<group>"; };
+		1AAA1FED2588F32300FA9198 /* Proxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Proxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				1A27856B258858B1006C8C18 /* ViewController.m */,
 				1A27857E25885F9F006C8C18 /* CYProxy.h */,
 				1A27857F25885F9F006C8C18 /* CYProxy.m */,
+				1AAA1FEC2588F32300FA9198 /* Proxy.h */,
+				1AAA1FED2588F32300FA9198 /* Proxy.m */,
 				1A27856D258858B1006C8C18 /* Main.storyboard */,
 				1A278570258858B5006C8C18 /* Assets.xcassets */,
 				1A278572258858B5006C8C18 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAA1FEE2588F32300FA9198 /* Proxy.m in Sources */,
 				1A27856C258858B1006C8C18 /* ViewController.m in Sources */,
 				1A278566258858B1006C8C18 /* AppDelegate.m in Sources */,
 				1A278577258858B5006C8C18 /* main.m in Sources */,

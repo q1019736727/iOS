@@ -10,5 +10,9 @@
 
 @interface CYProxy : NSObject
 
++ (instancetype)initWithTarget:(id)target;
+
+@property(nonatomic, weak) id target;
+
 @end
 

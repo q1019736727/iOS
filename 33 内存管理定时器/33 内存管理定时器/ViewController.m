@@ -5,7 +5,13 @@
 //  Created by Chiu Young on 2020/12/15.
 //
 
+
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:[CYProxy initWithTarget:self] selector:@selector(test) userInfo:nil repeats:YES];
+
+
 #import "ViewController.h"
+#import "CYProxy.h"
+#import "Proxy.h"
 
 @interface ViewController ()
 @property (nonatomic, strong)NSTimer * timer;
@@ -16,7 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(test) userInfo:nil repeats:YES];
+//    __weak typeof(self) weakSelf = self;
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"%@",weakSelf);
+//    }];
+    
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:[CYProxy initWithTarget:self] selector:@selector(test) userInfo:nil repeats:YES];
+
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:[Proxy proxyWithTarget:self] selector:@selector(test) userInfo:nil repeats:YES];
+
 }
 
 - (void)test{

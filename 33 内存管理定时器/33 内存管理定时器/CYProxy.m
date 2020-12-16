@@ -7,6 +7,21 @@
 
 #import "CYProxy.h"
 
+@interface CYProxy()
+
+@end
+
 @implementation CYProxy
+
++ (instancetype)initWithTarget:(id)target;
+{
+    CYProxy * proxy = [[CYProxy alloc]init];
+    proxy.target = target;
+    return proxy;
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    return self.target;
+}
 
 @end
