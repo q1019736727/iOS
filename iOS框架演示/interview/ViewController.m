@@ -11,6 +11,7 @@
 #import "Person.h"
 #import "Person+test.h"
 #import "CYButton.h"
+#import "CYUIView.h"
 
 @interface ViewController ()
 
@@ -59,11 +60,16 @@
     [control addTarget:self action:@selector(controlA) forControlEvents:UIControlEventTouchUpInside];
     
   
+    CYUIView * vi = [[CYUIView alloc]init];
+    vi.backgroundColor = [UIColor greenColor];
+    vi.frame = CGRectMake(100, 0, 100, 100);
+    [self.view addSubview:vi];
+    
     CYButton * btn = [[CYButton alloc]init];
-    btn.frame = CGRectMake(100, 0, 100, 100);
-    btn.backgroundColor = [UIColor greenColor];
+    btn.frame = CGRectMake(50, 50, 100, 100);
+    btn.backgroundColor = [UIColor blueColor];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    [vi addSubview:btn];
 
 
     
