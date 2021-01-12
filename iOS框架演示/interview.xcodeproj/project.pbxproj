@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0540AE25ADDB7800D005C4 /* CYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0540AD25ADDB7800D005C4 /* CYButton.m */; };
 		1A4AF31C253492B500009972 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4AF31B253492B500009972 /* Person.m */; };
 		1A4AF320253492F600009972 /* Person+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4AF31F253492F600009972 /* Person+test.m */; };
 		1ADB5B8B2524323B00952F5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB5B8A2524323B00952F5F /* AppDelegate.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0540AC25ADDB7800D005C4 /* CYButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYButton.h; sourceTree = "<group>"; };
+		1A0540AD25ADDB7800D005C4 /* CYButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYButton.m; sourceTree = "<group>"; };
 		1A4AF31A253492B500009972 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		1A4AF31B253492B500009972 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		1A4AF31E253492F600009972 /* Person+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+test.h"; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				1ADB5B8D2524323B00952F5F /* SceneDelegate.m */,
 				1ADB5B8F2524323B00952F5F /* ViewController.h */,
 				1ADB5B902524323B00952F5F /* ViewController.m */,
+				1A0540AC25ADDB7800D005C4 /* CYButton.h */,
+				1A0540AD25ADDB7800D005C4 /* CYButton.m */,
 				1A4AF31A253492B500009972 /* Person.h */,
 				1A4AF31B253492B500009972 /* Person.m */,
 				1A4AF31E253492F600009972 /* Person+test.h */,
@@ -161,6 +166,7 @@
 				1ADB5B8B2524323B00952F5F /* AppDelegate.m in Sources */,
 				1A4AF31C253492B500009972 /* Person.m in Sources */,
 				1ADB5B9C2524324000952F5F /* main.m in Sources */,
+				1A0540AE25ADDB7800D005C4 /* CYButton.m in Sources */,
 				1ADB5B8E2524323B00952F5F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

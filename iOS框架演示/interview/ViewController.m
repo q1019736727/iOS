@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "Person+test.h"
+#import "CYButton.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 
 @implementation ViewController
 
+- (void)controlA{
+    NSLog(@"control click");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //******************************************************************************
@@ -48,8 +52,19 @@
 //    NSLog(@"person2 age = %ld   weight = %ld",person2.age,person2.weight);
     
     
+    UIControl * control = [[UIControl alloc]init];
+    control.frame = CGRectMake(0, 0, 100, 100);
+    control.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:control];
+    [control addTarget:self action:@selector(controlA) forControlEvents:UIControlEventTouchUpInside];
     
   
+    CYButton * btn = [[CYButton alloc]init];
+    btn.frame = CGRectMake(100, 0, 100, 100);
+    btn.backgroundColor = [UIColor greenColor];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+
 
     
     
@@ -70,6 +85,10 @@
     
 
 
+}
+
+- (void)btnClick{
+    NSLog(@"btnClick");
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
