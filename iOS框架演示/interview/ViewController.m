@@ -12,6 +12,8 @@
 #import "Person+test.h"
 #import "CYButton.h"
 #import "CYUIView.h"
+#import "CYOperation.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -22,8 +24,18 @@
 - (void)controlA{
     NSLog(@"control click");
 }
+
+void test1(){
+    
+}
+- (void)openRunLoop{
+    NSLog(@"当前开辟线程 -->  %@",[NSThread currentThread]);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSThread * _monitorThread = [[NSThread alloc] initWithTarget:self selector:@selector(openRunLoop) object:nil];
+    [_monitorThread start];
     //******************************************************************************
 
 //    Person * person1 = [[Person alloc]init];
@@ -51,10 +63,13 @@
 //    
 //    NSLog(@"person1 age = %ld   weight = %ld",person1.age,person1.weight);
 //    NSLog(@"person2 age = %ld   weight = %ld",person2.age,person2.weight);
+    Person * per = [[Person alloc]init];
+    per.name = @"bob";
+    NSLog(@"name == %@",per.name);
     
     
     UIControl * control = [[UIControl alloc]init];
-    control.frame = CGRectMake(0, 0, 100, 100);
+    control.frame = CGRectMake(0, 50, 100, 100);
     control.backgroundColor = [UIColor grayColor];
     [self.view addSubview:control];
     [control addTarget:self action:@selector(controlA) forControlEvents:UIControlEventTouchUpInside];
@@ -62,23 +77,63 @@
   
     CYUIView * vi = [[CYUIView alloc]init];
     vi.backgroundColor = [UIColor greenColor];
-    vi.frame = CGRectMake(100, 0, 100, 100);
+    vi.frame = CGRectMake(100, 50, 100, 100);
     [self.view addSubview:vi];
     
     CYButton * btn = [[CYButton alloc]init];
-    btn.frame = CGRectMake(50, 50, 100, 100);
+    btn.frame = CGRectMake(50, 100, 100, 100);
     btn.backgroundColor = [UIColor blueColor];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [vi addSubview:btn];
+    [self.view addSubview:btn];
+
+    UIView * pu = [[UIView alloc]init];
+    pu.backgroundColor = [UIColor purpleColor];
+    pu.frame = CGRectMake(100, 100, 80, 80);
+    [self.view addSubview:pu];
+    
+        
+    NSOperationQueue * queue = [[NSOperationQueue alloc]init];
+    queue.maxConcurrentOperationCount = 2;
+    
+    NSBlockOperation * op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+//    [op1 start];
+    
+    NSBlockOperation * op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"%@",[NSThread currentThread]);
+    }];
+    
+    CYOperation * op3 = [[CYOperation alloc]init];
+//    [op2 start];
+    
+    [queue addOperation:op1];
+    [queue addOperation:op2];
+    [queue addOperation:op3];
+
+//    for (int a = 0; a < 100000; a ++) {
+//        NSBlockOperation * op = [NSBlockOperation blockOperationWithBlock:^{
+//            NSLog(@"%@",[NSThread currentThread]);
+//        }];
+//        [queue addOperation:op];
+//    }
 
 
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopBeforeWaiting | kCFRunLoopExit, false, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        NSLog(@"主线程监听");
+    });
+    
+    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
+    
+    CFRelease(observer);
+    
     
     
     unsigned int count;
     Ivar * ivas = class_copyIvarList([UITextField class], &count);
     for (int i = 0; i < count; i++) {
         Ivar iva = ivas[i];
-        NSLog(@"%s   %s",ivar_getName(iva),ivar_getTypeEncoding(iva));
+//        NSLog(@"%s   %s",ivar_getName(iva),ivar_getTypeEncoding(iva));
     }
     free(ivas);
     

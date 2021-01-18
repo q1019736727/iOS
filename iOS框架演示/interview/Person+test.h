@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Person (test)
 @property(nonatomic,assign) NSInteger weight;
-
+@property(nonatomic, copy) NSString * name;
 @end
 
 NS_ASSUME_NONNULL_END

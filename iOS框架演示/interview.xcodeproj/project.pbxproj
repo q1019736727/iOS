@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A0540AE25ADDB7800D005C4 /* CYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0540AD25ADDB7800D005C4 /* CYButton.m */; };
 		1A0540B225ADE05200D005C4 /* CYUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0540B125ADE05200D005C4 /* CYUIView.m */; };
+		1A3891C225B5649000A0F477 /* RunloopWatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3891C125B5649000A0F477 /* RunloopWatchController.m */; };
+		1A429DB725AED448006016FB /* CYOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A429DB625AED448006016FB /* CYOperation.m */; };
 		1A4AF31C253492B500009972 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4AF31B253492B500009972 /* Person.m */; };
 		1A4AF320253492F600009972 /* Person+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4AF31F253492F600009972 /* Person+test.m */; };
 		1ADB5B8B2524323B00952F5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB5B8A2524323B00952F5F /* AppDelegate.m */; };
@@ -25,6 +27,10 @@
 		1A0540AD25ADDB7800D005C4 /* CYButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYButton.m; sourceTree = "<group>"; };
 		1A0540B025ADE05200D005C4 /* CYUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYUIView.h; sourceTree = "<group>"; };
 		1A0540B125ADE05200D005C4 /* CYUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYUIView.m; sourceTree = "<group>"; };
+		1A3891C025B5649000A0F477 /* RunloopWatchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopWatchController.h; sourceTree = "<group>"; };
+		1A3891C125B5649000A0F477 /* RunloopWatchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopWatchController.m; sourceTree = "<group>"; };
+		1A429DB525AED448006016FB /* CYOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYOperation.h; sourceTree = "<group>"; };
+		1A429DB625AED448006016FB /* CYOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYOperation.m; sourceTree = "<group>"; };
 		1A4AF31A253492B500009972 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		1A4AF31B253492B500009972 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		1A4AF31E253492F600009972 /* Person+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+test.h"; sourceTree = "<group>"; };
@@ -79,10 +85,14 @@
 				1ADB5B8D2524323B00952F5F /* SceneDelegate.m */,
 				1ADB5B8F2524323B00952F5F /* ViewController.h */,
 				1ADB5B902524323B00952F5F /* ViewController.m */,
+				1A3891C025B5649000A0F477 /* RunloopWatchController.h */,
+				1A3891C125B5649000A0F477 /* RunloopWatchController.m */,
 				1A0540AC25ADDB7800D005C4 /* CYButton.h */,
 				1A0540AD25ADDB7800D005C4 /* CYButton.m */,
 				1A0540B025ADE05200D005C4 /* CYUIView.h */,
 				1A0540B125ADE05200D005C4 /* CYUIView.m */,
+				1A429DB525AED448006016FB /* CYOperation.h */,
+				1A429DB625AED448006016FB /* CYOperation.m */,
 				1A4AF31A253492B500009972 /* Person.h */,
 				1A4AF31B253492B500009972 /* Person.m */,
 				1A4AF31E253492F600009972 /* Person+test.h */,
@@ -173,7 +183,9 @@
 				1A4AF31C253492B500009972 /* Person.m in Sources */,
 				1ADB5B9C2524324000952F5F /* main.m in Sources */,
 				1A0540AE25ADDB7800D005C4 /* CYButton.m in Sources */,
+				1A429DB725AED448006016FB /* CYOperation.m in Sources */,
 				1ADB5B8E2524323B00952F5F /* SceneDelegate.m in Sources */,
+				1A3891C225B5649000A0F477 /* RunloopWatchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

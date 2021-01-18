@@ -11,10 +11,11 @@
 @implementation CYUIView
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+//    NSLog(@"CYUIView Bool %d",[super pointInside:point withEvent:event]);
     return  [super pointInside:point withEvent:event];
 }
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    NSLog(@"View  %@",[super hitTest:point withEvent:event]);
+//    NSLog(@"CYUIView View  %@",[super hitTest:point withEvent:event]);
     return  [super hitTest:point withEvent:event];
 }
 

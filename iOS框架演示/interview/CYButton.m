@@ -11,14 +11,15 @@
 @implementation CYButton
 
 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-    NSLog(@"SEL %@",NSStringFromSelector(action));
+//    NSLog(@"SEL %@",NSStringFromSelector(action));
     [super sendAction:action to:target forEvent:event];
 }
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+//    NSLog(@"CYButton Bool %d",[super pointInside:point withEvent:event]);
     return  [super pointInside:point withEvent:event];
 }
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    NSLog(@"View  %@",[super hitTest:point withEvent:event]);
+//    NSLog(@"CYButton View  %@",[super hitTest:point withEvent:event]);
     return  [super hitTest:point withEvent:event];
 }
 @end

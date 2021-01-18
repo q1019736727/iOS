@@ -7,8 +7,10 @@
 //
 
 #import "Person+test.h"
-
+#import <objc/runtime.h>
 @implementation Person (test)
+
+static void * PersonNameKey = &PersonNameKey;
 
 NSInteger weight_;
 
@@ -19,4 +21,10 @@ NSInteger weight_;
     return  weight_;
 }
 
+- (void)setName:(NSString *)name{
+    objc_setAssociatedObject(self, &PersonNameKey, name, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSString *)name{
+    return  objc_getAssociatedObject(self, &PersonNameKey);
+}
 @end
