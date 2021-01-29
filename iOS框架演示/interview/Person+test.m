@@ -22,6 +22,7 @@ NSInteger weight_;
 }
 
 - (void)setName:(NSString *)name{
+    NSLog(@"key == %p",@selector(name));
     objc_setAssociatedObject(self, &PersonNameKey, name, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 - (NSString *)name{

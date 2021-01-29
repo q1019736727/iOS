@@ -8,15 +8,43 @@
 
 #import "AppDelegate.h"
 
+//crash信息捕获
+#include <signal.h>
+#include <execinfo.h>
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)initHandler {
+    struct sigaction newSignalAction;
+    memset(&newSignalAction, 0,sizeof(newSignalAction));
+    newSignalAction.sa_handler = &signalHandler;
+    sigaction(SIGABRT, &newSignalAction, NULL);
+    sigaction(SIGILL, &newSignalAction, NULL);
+    sigaction(SIGSEGV, &newSignalAction, NULL);
+    sigaction(SIGFPE, &newSignalAction, NULL);
+    sigaction(SIGBUS, &newSignalAction, NULL);
+    sigaction(SIGPIPE, &newSignalAction, NULL);
+    
+    //异常时调用的函数
+    NSSetUncaughtExceptionHandler(&handleExceptions);
+}
+void handleExceptions(NSException *exception) {
+    NSLog(@"捕获 exception = %@",exception);
+    NSLog(@"捕获 reason = %@",exception.reason);
+    NSLog(@"捕获 callStackSymbols = %@",[exception callStackSymbols]);
+    NSLog(@"------------------------------------------");
+}
 
+void signalHandler(int sig) {
+    //最好不要写，可能会打印太多内容
+//    NSLog(@"signal = %d", sig);
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initHandler];
     return YES;
 }
 

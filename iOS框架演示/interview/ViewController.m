@@ -14,6 +14,7 @@
 #import "CYUIView.h"
 #import "CYOperation.h"
 #import <objc/runtime.h>
+#import "RunloopWatchController.h"
 
 @interface ViewController ()
 
@@ -21,8 +22,13 @@
 
 @implementation ViewController
 
+
+
 - (void)controlA{
     NSLog(@"control click");
+}
+- (void)btnClick2{
+    NSLog(@"加大点击");
 }
 
 void test1(){
@@ -36,6 +42,10 @@ void test1(){
     
     NSThread * _monitorThread = [[NSThread alloc] initWithTarget:self selector:@selector(openRunLoop) object:nil];
     [_monitorThread start];
+    
+    RunloopWatchController * vc = [[NSClassFromString(@"RunloopWatchController") alloc]init];
+    NSLog(@"%@",vc);
+    
     //******************************************************************************
 
 //    Person * person1 = [[Person alloc]init];
@@ -81,15 +91,22 @@ void test1(){
     [self.view addSubview:vi];
     
     CYButton * btn = [[CYButton alloc]init];
-    btn.frame = CGRectMake(50, 100, 100, 100);
+    btn.frame = CGRectMake(50, 50, 100, 100);
     btn.backgroundColor = [UIColor blueColor];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    [vi addSubview:btn];
 
-    UIView * pu = [[UIView alloc]init];
-    pu.backgroundColor = [UIColor purpleColor];
-    pu.frame = CGRectMake(100, 100, 80, 80);
-    [self.view addSubview:pu];
+//    UIView * pu = [[UIView alloc]init];
+//    pu.backgroundColor = [UIColor purpleColor];
+//    pu.frame = CGRectMake(100, 100, 80, 80);
+//    [self.view addSubview:pu];
+    
+    
+//    CYButton * btn22 = [[CYButton alloc]init];
+//    btn22.frame = CGRectMake(100, 300, 100, 100);
+//    btn22.backgroundColor = [UIColor linkColor];
+//    [btn22 addTarget:self action:@selector(btnClick2) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:btn22];
     
         
     NSOperationQueue * queue = [[NSOperationQueue alloc]init];
@@ -140,7 +157,7 @@ void test1(){
     UITextField * textF = [[UITextField alloc]init];
     textF.frame = CGRectMake(100, 100, 100, 50);
     textF.placeholder = @"请输入";
-    [self.view addSubview:textF];
+//    [self.view addSubview:textF];
     //iOS13 以前能通过KVC方式修改，现在不行了禁止了
 //    [textF setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
     
@@ -154,6 +171,7 @@ void test1(){
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     Person * p = [[Person alloc]init];
+    p.name = @"你好啊";
     __weak Person * weakPerson = p;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"----%@",weakPerson);

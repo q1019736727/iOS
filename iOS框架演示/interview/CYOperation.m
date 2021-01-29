@@ -10,6 +10,10 @@
 
 @implementation CYOperation
 
+- (void)start{
+    
+}
+
 - (void)main{
     NSLog(@"%s",__func__);
 }

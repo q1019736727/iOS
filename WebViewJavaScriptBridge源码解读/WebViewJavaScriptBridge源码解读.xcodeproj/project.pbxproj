@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AC21E7A25C3E609000F5241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E7925C3E609000F5241 /* AppDelegate.m */; };
+		1AC21E8025C3E609000F5241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E7F25C3E609000F5241 /* ViewController.m */; };
+		1AC21E8325C3E609000F5241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC21E8125C3E609000F5241 /* Main.storyboard */; };
+		1AC21E8525C3E60C000F5241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC21E8425C3E60C000F5241 /* Assets.xcassets */; };
+		1AC21E8825C3E60C000F5241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC21E8625C3E60C000F5241 /* LaunchScreen.storyboard */; };
+		1AC21E8B25C3E60C000F5241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E8A25C3E60C000F5241 /* main.m */; };
+		1AC21E9F25C3E639000F5241 /* WebViewJavascriptBrigeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E9225C3E638000F5241 /* WebViewJavascriptBrigeController.m */; };
+		1AC21EA025C3E639000F5241 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AC21E9425C3E638000F5241 /* test.html */; };
+		1AC21EA125C3E639000F5241 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E9625C3E639000F5241 /* WebViewJavascriptBridgeBase.m */; };
+		1AC21EA225C3E639000F5241 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E9725C3E639000F5241 /* WKWebViewJavascriptBridge.m */; };
+		1AC21EA325C3E639000F5241 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E9825C3E639000F5241 /* WebViewJavascriptBridge.m */; };
+		1AC21EA425C3E639000F5241 /* Source.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AC21E9B25C3E639000F5241 /* Source.js */; };
+		1AC21EA525C3E639000F5241 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC21E9C25C3E639000F5241 /* WebViewJavascriptBridge_JS.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AC21E7525C3E609000F5241 /* WebViewJavaScriptBridge源码解读.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebViewJavaScriptBridge源码解读.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC21E7825C3E609000F5241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AC21E7925C3E609000F5241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AC21E7E25C3E609000F5241 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1AC21E7F25C3E609000F5241 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1AC21E8225C3E609000F5241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AC21E8425C3E60C000F5241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AC21E8725C3E60C000F5241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AC21E8925C3E60C000F5241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC21E8A25C3E60C000F5241 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AC21E9225C3E638000F5241 /* WebViewJavascriptBrigeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBrigeController.m; sourceTree = "<group>"; };
+		1AC21E9325C3E638000F5241 /* WebViewJavascriptBrigeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBrigeController.h; sourceTree = "<group>"; };
+		1AC21E9425C3E638000F5241 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		1AC21E9625C3E639000F5241 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		1AC21E9725C3E639000F5241 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		1AC21E9825C3E639000F5241 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		1AC21E9925C3E639000F5241 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		1AC21E9A25C3E639000F5241 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		1AC21E9B25C3E639000F5241 /* Source.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Source.js; sourceTree = "<group>"; };
+		1AC21E9C25C3E639000F5241 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		1AC21E9D25C3E639000F5241 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		1AC21E9E25C3E639000F5241 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AC21E7225C3E609000F5241 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AC21E6C25C3E609000F5241 = {
+			isa = PBXGroup;
+			children = (
+				1AC21E7725C3E609000F5241 /* WebViewJavaScriptBridge源码解读 */,
+				1AC21E7625C3E609000F5241 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AC21E7625C3E609000F5241 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AC21E7525C3E609000F5241 /* WebViewJavaScriptBridge源码解读.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AC21E7725C3E609000F5241 /* WebViewJavaScriptBridge源码解读 */ = {
+			isa = PBXGroup;
+			children = (
+				1AC21E9525C3E639000F5241 /* WebViewJavascriptBridge */,
+				1AC21E9425C3E638000F5241 /* test.html */,
+				1AC21E9325C3E638000F5241 /* WebViewJavascriptBrigeController.h */,
+				1AC21E9225C3E638000F5241 /* WebViewJavascriptBrigeController.m */,
+				1AC21E7825C3E609000F5241 /* AppDelegate.h */,
+				1AC21E7925C3E609000F5241 /* AppDelegate.m */,
+				1AC21E7E25C3E609000F5241 /* ViewController.h */,
+				1AC21E7F25C3E609000F5241 /* ViewController.m */,
+				1AC21E8125C3E609000F5241 /* Main.storyboard */,
+				1AC21E8425C3E60C000F5241 /* Assets.xcassets */,
+				1AC21E8625C3E60C000F5241 /* LaunchScreen.storyboard */,
+				1AC21E8925C3E60C000F5241 /* Info.plist */,
+				1AC21E8A25C3E60C000F5241 /* main.m */,
+			);
+			path = "WebViewJavaScriptBridge源码解读";
+			sourceTree = "<group>";
+		};
+		1AC21E9525C3E639000F5241 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1AC21E9E25C3E639000F5241 /* WKWebViewJavascriptBridge.h */,
+				1AC21E9725C3E639000F5241 /* WKWebViewJavascriptBridge.m */,
+				1AC21E9A25C3E639000F5241 /* WebViewJavascriptBridgeBase.h */,
+				1AC21E9625C3E639000F5241 /* WebViewJavascriptBridgeBase.m */,
+				1AC21E9925C3E639000F5241 /* WebViewJavascriptBridge_JS.h */,
+				1AC21E9C25C3E639000F5241 /* WebViewJavascriptBridge_JS.m */,
+				1AC21E9B25C3E639000F5241 /* Source.js */,
+				1AC21E9D25C3E639000F5241 /* WebViewJavascriptBridge.h */,
+				1AC21E9825C3E639000F5241 /* WebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AC21E7425C3E609000F5241 /* WebViewJavaScriptBridge源码解读 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AC21E8E25C3E60C000F5241 /* Build configuration list for PBXNativeTarget "WebViewJavaScriptBridge源码解读" */;
+			buildPhases = (
+				1AC21E7125C3E609000F5241 /* Sources */,
+				1AC21E7225C3E609000F5241 /* Frameworks */,
+				1AC21E7325C3E609000F5241 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WebViewJavaScriptBridge源码解读";
+			productName = "WebViewJavaScriptBridge源码解读";
+			productReference = 1AC21E7525C3E609000F5241 /* WebViewJavaScriptBridge源码解读.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AC21E6D25C3E609000F5241 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					1AC21E7425C3E609000F5241 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 1AC21E7025C3E609000F5241 /* Build configuration list for PBXProject "WebViewJavaScriptBridge源码解读" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AC21E6C25C3E609000F5241;
+			productRefGroup = 1AC21E7625C3E609000F5241 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AC21E7425C3E609000F5241 /* WebViewJavaScriptBridge源码解读 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AC21E7325C3E609000F5241 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC21EA025C3E639000F5241 /* test.html in Resources */,
+				1AC21E8825C3E60C000F5241 /* LaunchScreen.storyboard in Resources */,
+				1AC21E8525C3E60C000F5241 /* Assets.xcassets in Resources */,
+				1AC21EA425C3E639000F5241 /* Source.js in Resources */,
+				1AC21E8325C3E609000F5241 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AC21E7125C3E609000F5241 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC21E8025C3E609000F5241 /* ViewController.m in Sources */,
+				1AC21EA325C3E639000F5241 /* WebViewJavascriptBridge.m in Sources */,
+				1AC21E7A25C3E609000F5241 /* AppDelegate.m in Sources */,
+				1AC21E9F25C3E639000F5241 /* WebViewJavascriptBrigeController.m in Sources */,
+				1AC21E8B25C3E60C000F5241 /* main.m in Sources */,
+				1AC21EA525C3E639000F5241 /* WebViewJavascriptBridge_JS.m in Sources */,
+				1AC21EA125C3E639000F5241 /* WebViewJavascriptBridgeBase.m in Sources */,
+				1AC21EA225C3E639000F5241 /* WKWebViewJavascriptBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AC21E8125C3E609000F5241 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AC21E8225C3E609000F5241 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AC21E8625C3E60C000F5241 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AC21E8725C3E60C000F5241 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AC21E8C25C3E60C000F5241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1AC21E8D25C3E60C000F5241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AC21E8F25C3E60C000F5241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WebViewJavaScriptBridge源码解读/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yyq.WebViewJavaScriptBridge----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AC21E9025C3E60C000F5241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WebViewJavaScriptBridge源码解读/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yyq.WebViewJavaScriptBridge----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AC21E7025C3E609000F5241 /* Build configuration list for PBXProject "WebViewJavaScriptBridge源码解读" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AC21E8C25C3E60C000F5241 /* Debug */,
+				1AC21E8D25C3E60C000F5241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AC21E8E25C3E60C000F5241 /* Build configuration list for PBXNativeTarget "WebViewJavaScriptBridge源码解读" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AC21E8F25C3E60C000F5241 /* Debug */,
+				1AC21E9025C3E60C000F5241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AC21E6D25C3E609000F5241 /* Project object */;
+}
